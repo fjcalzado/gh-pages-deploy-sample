@@ -6,7 +6,7 @@
   "scripts": {
     "start": "webpack-dev-server --inline",
     "build": "rimraf dist && webpack",
-    "gh-deploy": "npm run build && git add dist/* && git commit -m \"GH Deploy\" && git push && git subtree push --prefix dist GH-FJCalzado gh-pages"
+    "gh-deploy": "npm run build && git add dist/* && git commit -m 'GH Deploy' && git push && git subtree push --prefix dist GH-FJCalzado gh-pages"
   },
   "author": "Javier Calzado",
   "license": "MIT",
