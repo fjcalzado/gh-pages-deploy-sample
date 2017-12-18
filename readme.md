@@ -1,3 +1,3 @@
 # gh-pages-deploy-sample
 
-Lab project to practice gh-pages deploy automation.
+Lab project that will serve as playground to practice gh-pages deploy automation.
