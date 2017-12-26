@@ -3,11 +3,15 @@
   "version": "1.0.0",
   "description": "Basic project to practice gh-pages deploy automation",
   "main": "index.js",
+  "config": {
+    "deployFolder": "dist",
+    "deployRemote": "GH-FJCalzado"
+  },
   "scripts": {
     "start": "webpack-dev-server --inline",
-    "clean": "rimraf \"dist/!(.git)*\"",
+    "clean": "rimraf \"$npm_package_config_deployFolder/!(.git)*\"",
     "build": "npm run clean && webpack",
-    "gh-deploy": "git pull && npm run build && git add dist/* && git commit -m \"GH Deploy\" && git subtree push --prefix dist GH-FJCalzado gh-pages"
+    "ghDeploy": "npm run build && cd $npm_package_config_deployFolder && git add --all && git commit -m \"GH Deploy $(date \"+%s\")\" && git push && cd.."
   },
   "author": "Javier Calzado",
   "license": "MIT",
