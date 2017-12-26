@@ -9,10 +9,10 @@
     "msg": "GH Deploy"
   },
   "scripts": {
-    "start": "webpack-dev-server --inline",
-    "clean": "rimraf \"%npm_package_config_build%/**/!(.git)\"",
+    "start": "webpack-dev-server --inline",    
     "build": "npm run clean && webpack",
-    "gh:clean": "rimraf %npm_package_config_build% && git worktree prune && git branch -D gh-pages && git push -d %npm_package_config_remote% gh-pages",
+    "clean": "rimraf \"%npm_package_config_build%/**/!(.git)\"",
+    "gh:reset": "rimraf %npm_package_config_build% && git worktree prune && git branch -D gh-pages && git push -d %npm_package_config_remote% gh-pages",
     "gh:init": "git worktree add -B gh-pages %npm_package_config_build% && npm run clean",
     "gh:deploy": "npm run build && cd %npm_package_config_build% && git add --all && git commit -m \"%npm_package_config_msg%\" && git push"
   },
