@@ -4,14 +4,17 @@
   "description": "Basic project to practice gh-pages deploy automation",
   "main": "index.js",
   "config": {
-    "deployFolder": "dist",
-    "deployRemote": "GH-FJCalzado"
+    "build": "dist",
+    "remote": "GH-FJCalzado",
+    "msg": "GH Deploy"
   },
   "scripts": {
+    "jander": "%time%",
     "start": "webpack-dev-server --inline",
-    "clean": "rimraf \"$npm_package_config_deployFolder/!(.git)*\"",
+    "clean": "rimraf \"%npm_package_config_build%/!(.git)*\"",
     "build": "npm run clean && webpack",
-    "ghDeploy": "npm run build && cd $npm_package_config_deployFolder && git add --all && git commit -m \"GH Deploy $(date \"+%s\")\" && git push && cd.."
+    "gh:init": "rimraf %npm_package_config_build% && mkdir %npm_package_config_build% && git worktree add -B gh-pages %npm_package_config_build% %npm_package_config_remote%/gh-pages",
+    "gh:deploy": "npm run build && cd %npm_package_config_build% && git add --all && git commit -m \"%npm_package_config_msg%\" && git push"
   },
   "author": "Javier Calzado",
   "license": "MIT",
