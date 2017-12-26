@@ -13,9 +13,7 @@
     "clean": "rimraf \"%npm_package_config_build%/!(.git)*\"",
     "build": "npm run clean && webpack",
     "gh:clean": "rimraf %npm_package_config_build% && git worktree prune && git branch -D gh-pages && git push -d %npm_package_config_remote% gh-pages",
-    "gh:init:remote": "git checkout --orphan gh-pages && git rm -rfq . && git push %npm_package_config_remote% gh-pages",
-    "gh:init:local": "git worktree add -B gh-pages %npm_package_config_build% %npm_package_config_remote%/gh-pages",
-    "gh:init": "npm run gh:init:remote && npm run gh:init:local",
+    "gh:init": "git worktree add -B gh-pages %npm_package_config_build% && npm run clean",
     "gh:deploy": "npm run build && cd %npm_package_config_build% && git add --all && git commit -m \"%npm_package_config_msg%\" && git push"
   },
   "author": "Javier Calzado",
