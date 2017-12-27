@@ -6,7 +6,7 @@
   "config": {
     "build": "dist",
     "remote": "GH-FJCalzado",
-    "msg": "GH Deploy"
+    "msg": "Github Deploy in gh-pages"
   },
   "scripts": {
     "start": "webpack-dev-server --inline",    
