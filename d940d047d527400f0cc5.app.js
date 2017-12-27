@@ -947,7 +947,7 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
-__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__component__["a" /* SimpleComponent */], { content: "This is version: First Automated Deploy" }), document.getElementById("root"));
+__WEBPACK_IMPORTED_MODULE_1_react_dom__["render"](__WEBPACK_IMPORTED_MODULE_0_react__["createElement"](__WEBPACK_IMPORTED_MODULE_2__component__["a" /* SimpleComponent */], { content: "This is version: Second Automated Deploy" }), document.getElementById("root"));
 
 /***/ }),
 /* 15 */
@@ -18263,4 +18263,4 @@ var SimpleComponent = function SimpleComponent(props) {
 
 /***/ })
 /******/ ]);
-//# sourceMappingURL=d8ea3dd8084685993e5e.app.js.map
+//# sourceMappingURL=d940d047d527400f0cc5.app.js.map
